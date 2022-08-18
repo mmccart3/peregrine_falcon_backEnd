@@ -6,6 +6,7 @@ const PrivateAccommDetail = require("../models/privateAccommDetail");
 const Location2albergues = require("../models/location2albergues");
 const Albergue = require("../models/albergue");
 const Paragraph = require("../models/paragraphs");
+const MapLocationCoords = require("../models/mapLocationCoords")
 
 exports.getStageData = async (req, res) => {
     try {
@@ -76,6 +77,23 @@ exports.getLocationData = async (req, res) => {
                 locationParagraphs    
             };
             res.status(200).send({locationData});
+        }
+    } catch (error) {
+        console.log(error);
+        res.status(500).send({ message: error.message })
+    }
+};
+
+exports.getMapCoordsData = async (req, res) => {
+    try {
+        if (!req.user) {
+            res.status(400).send(`you are not logged in`);
+        } else {
+            const coordData = await MapLocationCoords.findAll(
+            {
+                }
+            );
+            res.status(200).send({coordData});
         }
     } catch (error) {
         console.log(error);
