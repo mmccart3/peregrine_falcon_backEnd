@@ -68,7 +68,7 @@ MapLocationCoords.belongsTo(Location, { as: "locations", foreignKey: "locationID
 Location.hasMany(MapLocationCoords, { as: "MapLocationCoords", foreignKey: "locationID"});
 MapLocationCoords.belongsTo(Stages, { as: "stages", foreignKey: "stageID"});
 Stages.hasMany(MapLocationCoords, { as: "MapLocationCoords", foreignKey: "stageID"});
-Location.belongsToMany(Stages, { as: "fredlocations", through: MapLocationCoords});
-Stages.belongsToMany(Location, { as: "georgestages", through: MapLocationCoords });
+// Location.belongsToMany(Stages, { as: "fredlocations", through: MapLocationCoords});
+// Stages.belongsToMany(Location, { as: "georgestages", through: MapLocationCoords });
 
 module.exports = MapLocationCoords;
