@@ -48,7 +48,7 @@ const MapLocationCoords= sequelize.define('MapLocationCoords',{
 
 },
 {
-        tableName: 'MapLocationCoords',
+        tableName: 'mapLocationCoords',
         timestamps: false,
     indexes: [
         {
