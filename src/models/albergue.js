@@ -99,6 +99,26 @@ const Albergue= sequelize.define('Albergue',{
     albergueAdditionalComments: {
       type: DataTypes.STRING(255),
       allowNull: true
+    },
+    alberguepic1URL: {
+      type: DataTypes.STRING(255),
+      allowNull:true
+    },
+    alberguepic2URL: {
+      type: DataTypes.STRING(255),
+      allowNull:true
+    },
+    alberguepic3URL: {
+      type: DataTypes.STRING(255),
+      allowNull:true
+    },
+    alberguepic4URL: {
+      type: DataTypes.STRING(255),
+      allowNull:true
+    },
+    whatsAppNumber: {
+      type: DataTypes.BIGINT,
+      allowNull: true
     }
   }, {
     tableName: 'albergue',

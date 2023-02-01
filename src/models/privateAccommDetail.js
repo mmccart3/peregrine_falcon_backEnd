@@ -16,6 +16,7 @@ const PrivateAccommDetail = sequelize.define('PrivateAccommDetail',{
       type: DataTypes.STRING(255),
       allowNull: true
     },
+    
     onedPersonRateMin: {
       type: DataTypes.DECIMAL(5,2),
       allowNull: true
