@@ -64,10 +64,6 @@ const Albergue= sequelize.define('Albergue',{
       type: DataTypes.STRING(255),
       allowNull: true
     },
-    openingTimes: {
-      type: DataTypes.STRING(255),
-      allowNull: true
-    },
     email: {
       type: DataTypes.STRING(64),
       allowNull: true
@@ -119,7 +115,24 @@ const Albergue= sequelize.define('Albergue',{
     whatsAppNumber: {
       type: DataTypes.BIGINT,
       allowNull: true
+    },
+    gps_lat: {
+      type: DataTypes.DECIMAL(8,5),
+      allowNull: true
+    },
+    gps_lng: {
+      type: DataTypes.DECIMAL(8,5),
+      allowNull: true
+    },
+    check_in_opens: {
+      type: DataTypes.STRING(255),
+      allowNull: true
+    },
+    check_in_closes: {
+      type: DataTypes.STRING(255),
+      allowNull: true
     }
+    
   }, {
     tableName: 'albergue',
     timestamps: false,
